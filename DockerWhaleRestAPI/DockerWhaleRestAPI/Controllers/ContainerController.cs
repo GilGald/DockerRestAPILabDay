@@ -14,19 +14,27 @@ namespace DockerWhaleRestAPI.Controllers
     [RoutePrefix("api/container")]
     public class ContainerController : ApiController
     {
-        [HttpGet]
+        const string hostaddress = "hostAddress";
+
+        [HttpGet]        
         public HttpResponseMessage List()
         {
-            string url = "http://13.93.209.195:4243/images/json";
+            string hostAddress = string.Empty;
+            //string hostAddress = "http://13.93.209.195:4243/";
+            
+            if (Request.Headers.Contains(hostaddress))
+            {
+                hostAddress = Request.Headers.GetValues(hostaddress).First();
+            }
+            
+            var url = string.Join("/",hostAddress +"images/json");
             var http = new HttpClient();
+
             http.Request.Accept = HttpContentTypes.ApplicationJson;
             HttpResponse response = http.Get(url);
-            var deserializeObject =JsonConvert.DeserializeObject(response.RawText);
-
-
-
+            var deserializeObject =JsonConvert.DeserializeObject(response.RawText);            
             HttpResponseMessage httpResponseMessage = Request.CreateResponse(response.StatusCode, deserializeObject,new HttpConfiguration().Formatters.JsonFormatter);
-            return httpResponseMessage;                        
+            return httpResponseMessage;
         }
     }
 }
