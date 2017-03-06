@@ -43,3 +43,6 @@ C:\work\Git\DockerRestAPILabDay\DockerWhaleRestAPI\DockerWhaleRestAPI\bin\System
 C:\work\Git\DockerRestAPILabDay\DockerWhaleRestAPI\DockerWhaleRestAPI\obj\Debug\DockerWhaleRestAPI.csprojResolveAssemblyReference.cache
 C:\work\Git\DockerRestAPILabDay\DockerWhaleRestAPI\DockerWhaleRestAPI\obj\Debug\DockerWhaleRestAPI.dll
 C:\work\Git\DockerRestAPILabDay\DockerWhaleRestAPI\DockerWhaleRestAPI\obj\Debug\DockerWhaleRestAPI.pdb
+C:\work\Git\DockerRestAPILabDay\DockerWhaleRestAPI\DockerWhaleRestAPI\bin\System.Web.Cors.dll
+C:\work\Git\DockerRestAPILabDay\DockerWhaleRestAPI\DockerWhaleRestAPI\bin\System.Web.Http.Cors.dll
+C:\work\Git\DockerRestAPILabDay\DockerWhaleRestAPI\DockerWhaleRestAPI\bin\System.Web.Http.Cors.xml

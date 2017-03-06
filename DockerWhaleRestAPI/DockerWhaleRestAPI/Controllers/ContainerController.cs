@@ -27,7 +27,7 @@ namespace DockerWhaleRestAPI.Controllers
                 hostAddress = Request.Headers.GetValues(hostaddress).First();
             }
             
-            var url = string.Join("/",hostAddress +"images/json");
+            var url = string.Join("/",hostAddress ,"images/json");
             var http = new HttpClient();
 
             http.Request.Accept = HttpContentTypes.ApplicationJson;
